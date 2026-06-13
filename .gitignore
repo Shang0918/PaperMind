@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# IDE
+.idea/
+.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Local papers
+data/papers/*
+!data/papers/.gitkeep
+
+# Vector databases and indexes
+chroma_db/
+vector_db/
+bm25_index/
+
+# Checkpoint and local databases
+checkpoint_db/
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs and generated outputs
+logs/
+outputs/
+tmp/
+
+# Model files
+*.bin
+*.safetensors
+*.pt
+*.pth
