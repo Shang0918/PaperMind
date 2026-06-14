@@ -31,6 +31,7 @@ data/papers/*
 chroma_db/
 vector_db/
 bm25_index/
+data/chroma/*
 
 # Checkpoint and local databases
 checkpoint_db/
