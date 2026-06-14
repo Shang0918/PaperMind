@@ -261,30 +261,17 @@ def build_retrieval_content(
     metadata: dict,
 ) -> str:
     """
-    为正文添加文档级和章节级上下文。
-
-    Chroma只会向量化page_content，不会自动向量化metadata，
-    因此需要把重要的论文标题和章节名称放入正文。
+    不将 元数据 导入 文本中
     """
-    context_parts = []
-
     document_title = metadata.get("document_title")
-    section = metadata.get("section")
 
-    if document_title:
-        context_parts.append(
-            f"Paper: {document_title}"
-        )
-
-    if section:
-        context_parts.append(
-            f"Section: {section}"
-        )
-
-    if not context_parts:
+    if not document_title:
         return body.strip()
-
-    return "\n".join(context_parts) + "\n\n" + body.strip()
+    
+    return(
+        f"Paper:{document_title}\n\n"
+        f"{body.strip()}"
+    )
 
 def split_page_documents(
     page_documents: list[Document],
