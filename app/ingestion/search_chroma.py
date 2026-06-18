@@ -9,7 +9,7 @@ from langchain_chroma import Chroma
 from langchain_huggingface import HuggingFaceEmbeddings
 
 
-PROJECT_ROOT = Path(__file__).resolve().parent.parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 CHROMA_DIR = PROJECT_ROOT / "data" / "chroma"
 
 COLLECTION_NAME = "papermind_papers"
